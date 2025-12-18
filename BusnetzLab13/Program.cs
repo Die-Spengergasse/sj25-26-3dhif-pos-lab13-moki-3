@@ -12,5 +12,3 @@ Console.WriteLine(file);
 Busnetz b1 = JsonSerializer.Deserialize<Busnetz>(file);
 con.readBusnetz(b1);
 
-
-

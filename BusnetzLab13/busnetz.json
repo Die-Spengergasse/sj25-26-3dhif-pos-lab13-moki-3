@@ -4,28 +4,16 @@
             "LinienNummer": "42",
             "Fahrer": "Herr Müller",
             "Haltestellen": [
-                {
-                    "Name": "Zentralplatz",
-                    "Zeit": "08:00"
-                },
-                {
-                    "Name": "Schulzentrum",
-                    "Zeit": "08:05"
-                }
+                { "Name": "Zentralplatz", "Zeit": "08:00" },
+                { "Name": "Schulzentrum", "Zeit": "08:05" }
             ]
         },
         {
             "LinienNummer": "55",
             "Fahrer": "Frau Becker",
             "Haltestellen": [
-                {
-                    "Name": "Hauptbahnhof",
-                    "Zeit": "09:00"
-                },
-                {
-                    "Name": "Museum",
-                    "Zeit": "09:08"
-                }
+                { "Name": "Hauptbahnhof", "Zeit": "09:00" },
+                { "Name": "Museum", "Zeit": "09:08" }
             ]
         }
     ]
