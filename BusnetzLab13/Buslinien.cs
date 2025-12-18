@@ -1,19 +1,31 @@
+using System.Globalization;
+
 namespace BusnetzLab13;
 
 public class Busnetz
 {
-    public List<Buslinien> Busliniens { get; set; }
+    public List<Buslinien> Buslinien { get; set; }
 }
 
 public class Buslinien
 {
-    public int LinienNummer { get; set; }
+    public string LinienNummer { get; set; }
     public string Fahrer { get; set; }
-    
+    public List<Haltestellen> Haltestellen { get; set; }
+
+    public override string ToString()
+    {
+        return $"Liniennummer: {LinienNummer}\nFahrer: {Fahrer}";
+    }
 }
 
-public class Haltestelle
+public class Haltestellen
 {
     public string Name { get; set; }
     public string Zeit { get; set; }
+
+    public override string ToString()
+    {
+        return $"Name: {Name}\nZeit: {Zeit}";
+    }
 }
