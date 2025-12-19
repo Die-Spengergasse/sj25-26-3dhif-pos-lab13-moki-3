@@ -14,13 +14,11 @@ public class JsonHandler
         Console.WriteLine("\n");
         foreach (var linie in b1.Buslinien)
         {
-            Console.WriteLine(linie);
-
+            Console.WriteLine($"Linie {linie.LinienNummer} - Fahrer: {linie.Fahrer}\nHaltestellen:");
             foreach (var h in linie.Haltestellen)
             {
-                Console.WriteLine("  " + h);
+                Console.WriteLine($"\t- {h.Name} um {h.Zeit}");
             }
-
             Console.WriteLine();
         }
     }

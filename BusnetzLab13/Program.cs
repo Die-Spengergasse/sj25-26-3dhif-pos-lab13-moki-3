@@ -26,6 +26,7 @@ con.readBusnetz(b1);
 
 Haltestellen h2 = new Haltestellen("Pilgramgasse", "15:30");
 b1 = con.addFahrerUndHaltestelle("Herr Maier", h2, b1, "42");
+con.readBusnetz(b1);
 
 
 
