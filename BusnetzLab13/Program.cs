@@ -32,6 +32,6 @@ con.readBusnetz(b1);
 
 con.writeInJSON(b1, "busnetz_neu_01.json");
 
-
+con.getHalteStellenFromFahrer("Herr Maier", b1);
 
 

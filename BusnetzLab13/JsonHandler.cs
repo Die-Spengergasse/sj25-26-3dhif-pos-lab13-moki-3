@@ -19,6 +19,7 @@ public class JsonHandler
             {
                 Console.WriteLine($"\t- {h.Name} um {h.Zeit}");
             }
+
             Console.WriteLine();
         }
     }
@@ -48,7 +49,7 @@ public class JsonHandler
         {
             List<Haltestellen> tmp = new List<Haltestellen>();
             tmp.Add(h);
-            b.Buslinien.Add(new Buslinien(buslinie, fahrer,tmp));
+            b.Buslinien.Add(new Buslinien(buslinie, fahrer, tmp));
         }
 
         return b;
@@ -60,11 +61,25 @@ public class JsonHandler
         string filePath = Path.Combine(desktopPath, fileName);
 
         string jsonForFile = JsonSerializer.Serialize(b, new JsonSerializerOptions { WriteIndented = true });
-        
+
         File.WriteAllText(filePath, jsonForFile);
 
         Console.WriteLine($"File saved to {desktopPath}");
     }
-    
-    
+
+    public void getHalteStellenFromFahrer(string fahrer, Busnetz b)
+    {
+        var ergebnis = from bl in b.Buslinien
+            where bl.Fahrer.Equals(fahrer)
+            from h in bl.Haltestellen
+            select h;
+        
+            Console.WriteLine(fahrer);
+            foreach (Haltestellen hstellen in ergebnis)
+            {
+                Console.WriteLine($"{hstellen.Name} um {hstellen.Zeit}");
+            }
+        
+    }
+
 }
